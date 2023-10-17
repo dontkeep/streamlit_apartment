@@ -99,7 +99,7 @@ Selanjutnya kita akan memeriksa apakah datasetsnya terdapat baris yang kosong at
 ```  bash
 sns.heatmap(df.isnull())
 ```
-![Alt text](download.png)
+![Alt text](download.png) <br>
 Terlihat aman yak!
 
 Mari kita lanjut dengan data exploration kita,
