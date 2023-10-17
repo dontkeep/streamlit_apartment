@@ -15,8 +15,8 @@ st.title('Estimasi Harga Apartment di Azerbaijan')
 # apakah di lantai terakhir?(1 yes, 0 no), 
 # location (0 = quarter, 1 = rayon, 2 = metro ).
 
-area = st.number_input('Masukkan luas area (m^2)', min_value=0.0, step=0.1)
-bedroom = st.number_input('Masukkan jumlah kamar', step=1, max_value=20, min_value=0)
+area = st.number_input('Masukkan luas area (m^2)', min_value=40.0, step=0.1)
+bedroom = st.number_input('Masukkan jumlah kamar', step=1, max_value=20, min_value=1)
 new = st.selectbox('Apakah bangunan baru?', ['Yes', 'No'])
 
 if new == 'Yes':
