@@ -15,9 +15,10 @@ st.title('Estimasi Harga Apartment di Azerbaijan')
 # apakah di lantai terakhir?(1 yes, 0 no), 
 # location (0 = quarter, 1 = rayon, 2 = metro ).
 
-area = st.number_input('Masukkan luas area (m^2)')
-bedroom = st.number_input('Masukkan jumlah kamar')
+area = st.number_input('Masukkan luas area (m^2)', min_value=0.0, step=0.1)
+bedroom = st.number_input('Masukkan jumlah kamar', step=1, max_value=20, min_value=0)
 new = st.selectbox('Apakah bangunan baru?', ['Yes', 'No'])
+
 if new == 'Yes':
     new = 1
 else:
@@ -56,11 +57,15 @@ else:
     location = 2
 
 if st.button('Estimasi Harga'):
-    result = model.predict([[area, bedroom, new, repaired, deed, mortage, first_floor, last_floor, location]])
-    formatted_result_AZN = "{:,.2f}".format(round(result[0], 2))
-    formatted_result_IDR = "{:,.2f}".format(round(result[0] * 9245.97, 2))
-    st.write('Harga Apartment dalam AZN : ', formatted_result_AZN)
-    st.write('Harga Apartment dalam IDR(Juta) : ', formatted_result_IDR)
+    if area == 0 or bedroom == 0:
+        st.write('Masukkan luas area dan jumlah kamar terlebih dahulu')
+        st.stop()
+    else:
+        result = model.predict([[area, bedroom, new, repaired, deed, mortage, first_floor, last_floor, location]])
+        formatted_result_AZN = "{:,.2f}".format(round(result[0], 2))
+        formatted_result_IDR = "{:,.2f}".format(round(result[0] * 9245.97, 2))
+        st.write('Harga Apartment dalam AZN : ', formatted_result_AZN)
+        st.write('Harga Apartment dalam IDR(Juta) : ', formatted_result_IDR)
 
 
 
