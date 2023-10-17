@@ -193,9 +193,10 @@ pickle.dump(model,open(filename,'wb'))
 
 ## Evaluation
 Disini saya menggunakan F1 score sebagai metrik evaluasi.
-- F1 Score: F1 score adalah rata-rata harmonis antara presisi dan recall. F1 score memberikan keseimbangan antara presisi dan recall. F1 score dihitung dengan menggunakan rumus: 
-![Alt text](image-1.png)
-- Setelah itu saya menerapkannya dalam kode, seperti berikut :
+- F1 Score: F1 score adalah rata-rata harmonis antara presisi dan recall. F1 score memberikan keseimbangan antara presisi dan recall. F1 score dihitung dengan menggunakan rumus: <br> 
+$$2*(P*R/P+R)$$
+
+- Setelah itu saya menerapkannya dalam kode menggunakan fungsi f1_score, seperti berikut :
 ``` bash 
 from sklearn.metrics import precision_recall_curve, f1_score
 
