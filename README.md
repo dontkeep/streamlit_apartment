@@ -32,15 +32,15 @@ Dataset yang saya gunakan berasal jadi Kaggle yang berisi harga apartment di Aze
 
 
 ### Variabel-variabel pada Apartment Prices for Azerbaijan Market adalah sebagai berikut:
-- Price            : Menunjukkan harga apartment.
-- Location         : Menunjukkan lokasi apartment.
-- Rooms            : Menunjukkan jumlah kamar.
-- Square           : Menunjukkan luas apartment.
-- Floor            : Menunjukkan apartment berada di lantai berapa.
-- New Building     : Menunjukkan keterangan apakah apartment berada di bangunan baru
-- Has Repair       : Menunjukkan keterangan apakah apartment pernah menjalani perbaikan sebelumnya
-- Has Bill of Sale : Menunjukkan apakah apartment ada akta pembelian
-- Has Mortgage     : Menunjukkan apakah apartment ada perjanjian pinjaman dengan bank/lembaga keuangan.
+- Price            : Menunjukkan harga apartment. [Numbers, Min: 9600, Max: 8.07M]
+- Location         : Menunjukkan lokasi apartment.[String, İnşaatçılar m., Nəriman Nərimanov m., Nəsimi r., Şah İsmayıl Xətai m., Həzi Aslanov m.]
+- Rooms            : Menunjukkan jumlah kamar.    [Numbers, Min: 1, Max: 20]
+- Square           : Menunjukkan luas apartment.  [Numbers, Min: 12, Max: 1.6k]
+- Floor            : Menunjukkan apartment berada di lantai berapa. [Numbers, Min: 1, Max: 19]
+- New Building     : Menunjukkan keterangan apakah apartment berada di bangunan baru [Boolean, True: 1, False: 0]
+- Has Repair       : Menunjukkan keterangan apakah apartment pernah menjalani perbaikan sebelumnya [Boolean, True: 1, False: 0]
+- Has Bill of Sale : Menunjukkan apakah apartment ada akta pembelian [Boolean, True: 1, False: 0]
+- Has Mortgage     : Menunjukkan apakah apartment ada perjanjian pinjaman dengan bank/lembaga keuangan. [Boolean, True: 1, False: 0]
 
 ## Data Preparation
 ### Data Collection
