@@ -110,17 +110,20 @@ sns.heatmap(df.corr(), annot=True)
 ![Alt text](image.png)
 <br>
 Selanjutnya mari kita lihat frequensi kolom harga dan square/m, lalu membandingkan antara 2 kolom itu, 
-``` bash
+```bash
 summary_stats = df.describe()
 
-# Distribution of apartment prices
 plt.figure(figsize=(4, 3))
 sns.histplot(df['price'], bins=30, kde=True)
 plt.title('Distribution of Apartment Prices')
 plt.xlabel('Price')
 plt.ylabel('Frequency')
 plt.show()
-
+```
+![image](https://github.com/dontkeep/streamlit_apartment/assets/105641121/e182facb-140f-4b03-9a8b-b8e4265a4257)
+<br>
+Bisa dilihat diatas adalah frequency dari price, yang paling sedikit muncul dan yang paling banyak muncul
+```bash
 # Distribution of square footage
 plt.figure(figsize=(4, 3))
 sns.histplot(df['square'], bins=30, kde=True)
@@ -128,7 +131,11 @@ plt.title('Distribution of Square Footage')
 plt.xlabel('Square Footage (sq. meters)')
 plt.ylabel('Frequency')
 plt.show()
-
+```
+![image](https://github.com/dontkeep/streamlit_apartment/assets/105641121/8f95883a-edfa-42d5-8e3e-c86b630e4d00)
+<br>
+Bisa dilihat diatas adalah frequency dari Square Footage, yang paling sedikit muncul dan yang paling banyak muncul
+```bash
 # Scatter plot of Price vs. Square
 plt.figure(figsize=(4, 3))
 sns.scatterplot(x='square', y='price', data=df)
@@ -137,10 +144,9 @@ plt.xlabel('Square Footage (sq. meters)')
 plt.ylabel('Price')
 plt.show()
 ```
-![image](https://github.com/dontkeep/streamlit_apartment/assets/105641121/e182facb-140f-4b03-9a8b-b8e4265a4257)
-![image](https://github.com/dontkeep/streamlit_apartment/assets/105641121/8f95883a-edfa-42d5-8e3e-c86b630e4d00)
 ![image](https://github.com/dontkeep/streamlit_apartment/assets/105641121/24ff1282-83bb-4597-af08-906b023d7939)
-
+<br>
+Diatas adalah perbandingan antara harga dan luas apartment, bisa ditunjukkan dengan scatterplot. <br>
 hmm...untuk berjaga-jaga mari kita check apakah terdapat duplicate data di datasets kita,
 ``` bash
 df[df.duplicated()]
