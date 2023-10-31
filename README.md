@@ -108,6 +108,37 @@ plt.figure(figsize=(10,8))
 sns.heatmap(df.corr(), annot=True)
 ```
 ![Alt text](image.png)
+<br>
+Selanjutnya mari kita lihat frequensi kolom harga dan square/m, lalu membandingkan antara 2 kolom itu, 
+``` bash
+summary_stats = df.describe()
+
+# Distribution of apartment prices
+plt.figure(figsize=(4, 3))
+sns.histplot(df['price'], bins=30, kde=True)
+plt.title('Distribution of Apartment Prices')
+plt.xlabel('Price')
+plt.ylabel('Frequency')
+plt.show()
+
+# Distribution of square footage
+plt.figure(figsize=(4, 3))
+sns.histplot(df['square'], bins=30, kde=True)
+plt.title('Distribution of Square Footage')
+plt.xlabel('Square Footage (sq. meters)')
+plt.ylabel('Frequency')
+plt.show()
+
+# Scatter plot of Price vs. Square
+plt.figure(figsize=(4, 3))
+sns.scatterplot(x='square', y='price', data=df)
+plt.title('Price vs. Square Footage')
+plt.xlabel('Square Footage (sq. meters)')
+plt.ylabel('Price')
+plt.show()
+```
+![image](https://github.com/dontkeep/streamlit_apartment/assets/105641121/e182facb-140f-4b03-9a8b-b8e4265a4257)
+
 hmm...untuk berjaga-jaga mari kita check apakah terdapat duplicate data di datasets kita,
 ``` bash
 df[df.duplicated()]
