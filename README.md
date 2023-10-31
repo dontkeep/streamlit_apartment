@@ -120,7 +120,7 @@ plt.xlabel('Price')
 plt.ylabel('Frequency')
 plt.show()
 ```
-![image](https://github.com/dontkeep/streamlit_apartment/assets/105641121/e182facb-140f-4b03-9a8b-b8e4265a4257)
+![image](https://github.com/dontkeep/streamlit_apartment/assets/105641121/55193ac0-1a8e-400c-a6da-9d265c238fb0)
 <br>
 Bisa dilihat diatas adalah frequency dari price, yang paling sedikit muncul dan yang paling banyak muncul
 ```bash
