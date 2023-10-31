@@ -139,6 +139,7 @@ plt.show()
 ```
 ![image](https://github.com/dontkeep/streamlit_apartment/assets/105641121/e182facb-140f-4b03-9a8b-b8e4265a4257)
 ![image](https://github.com/dontkeep/streamlit_apartment/assets/105641121/8f95883a-edfa-42d5-8e3e-c86b630e4d00)
+![image](https://github.com/dontkeep/streamlit_apartment/assets/105641121/24ff1282-83bb-4597-af08-906b023d7939)
 
 hmm...untuk berjaga-jaga mari kita check apakah terdapat duplicate data di datasets kita,
 ``` bash
